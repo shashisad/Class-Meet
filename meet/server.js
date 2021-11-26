@@ -4,6 +4,11 @@ const path=require("path");
 
 
 var app=express();
+
+app.get("/", function (req, res) {
+    res.sendFile(`${__dirname}`)
+  })
+
 var server=app.listen(process.env.PORT||5000,function(){
     console.log("listening to port 5000");
 });
@@ -109,6 +114,8 @@ var userCount =userConnection.length;
         }
     });
 });
+
+// define the first route
 
 app.use(fileUpload());
 app.post("/attachimg",function(req,res){

@@ -57,7 +57,7 @@ export const Header = ({children}) => {
         </div>
 
               <div className={classes.header__wrapper__right}>
-              <Add onClick={handleClick}className={classes.icon} />
+             {loggedInUser && <Add onClick={handleClick}className={classes.icon} /> } 
               {/* <Apps className={classes.icon}/> */}
            <Menu
               id="simple-menu"

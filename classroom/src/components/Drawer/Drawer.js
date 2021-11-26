@@ -33,7 +33,7 @@ const useStyles = makeStyles({
 export default function SwipeableTemporaryDrawer() {
  
   const routeChange = () =>{ 
-   window.location.href= 'http://localhost:5000/action.html';
+   window.location.href= 'https://class-meet.herokuapp.com/action.html';
   }
 
   const [anchorEl,setAnchorEl]=React.useState(null);
@@ -96,7 +96,7 @@ const handleCreate = () => {
             
               {index % 2 === 0 ?     <ListItemText primary={text}  onClick={handleJoin}  /> :  (loggedInUser ?<ListItemText primary={text}  onClick={handleCreate}/>:<Divider/>) }
               <ListItemIcon>
-              {index % 2 === 0 ? <ClassIcon /> :  <ClassIcon /> }
+              {index % 2 === 0 ? <ClassIcon /> : (loggedInUser ? <ClassIcon />:<Divider/>) }
             </ListItemIcon>
            
           </ListItem>

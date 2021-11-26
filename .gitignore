@@ -1,0 +1,21 @@
+# dependencies
+classroom/node_modules
+classroom/.pnp
+classroom/.pnp.js
+meet/node_modules
+# testing
+classroom/coverage
+
+# production
+classroom/build
+
+# misc
+classroom/.DS_Store
+classroom/.env.local
+classroom/.env.development.local
+classroom/.env.test.local
+classroom/.env.production.local
+
+classroom/npm-debug.log*
+classroom/yarn-debug.log*
+classroom/yarn-error.log*

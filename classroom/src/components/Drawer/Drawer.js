@@ -94,7 +94,7 @@ const handleCreate = () => {
         {[ 'Join Class' ,'Create Class'].map((text, index) => (
           <ListItem button key={text}>
             
-              {index % 2 === 0 ?     <ListItemText primary={text}  onClick={handleJoin}  /> : <ListItemText primary={text}  onClick={handleCreate} />}
+              {index % 2 === 0 ?     <ListItemText primary={text}  onClick={handleJoin}  /> :  (loggedInUser ?<ListItemText primary={text}  onClick={handleCreate}/>:<Divider/>) }
               <ListItemIcon>
               {index % 2 === 0 ? <ClassIcon /> :  <ClassIcon /> }
             </ListItemIcon>
